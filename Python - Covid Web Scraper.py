@@ -7,14 +7,14 @@ from urllib.request import HTTPDigestAuthHandler, urlopen
 from bs4 import BeautifulSoup
 import csv 
 
-state = "NSW"
+state = "NSW".lower()
 url = (f"https://www.qld.gov.au/health/conditions/health-alerts/coronavirus-covid-19/current-status/contact-tracing#{state}")
 print(url)
 
 html = urlopen(url).read()
 bs = BeautifulSoup(html,features='html.parser')
-div = bs.find(lambda id: id.name == 'nsw*')
-table = bs.find(lambda tag: tag.name=='table') 
+div = bs.find("div", {"id:""nsw_iev_table_container_165512"})
+table = bs.findAll(lambda tag: tag.name=='table') 
 rows = table.findAll(lambda tag: tag.name=='tr')
 
 data_frame= []
