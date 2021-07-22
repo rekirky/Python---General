@@ -61,4 +61,39 @@ print(i)
 
 print(float(-52))
 print(float("52.0"))
-print(float("2.x"))
+
+
+print("\\\\")
+
+
+def mystery_delete():
+    mystery_set = [1,2,3]
+    # mystery_set has been defined
+    string = 2
+
+# delete string from mystery_set
+    mystery_set_temp = mystery_set
+    for i in mystery_set_temp:
+        if string == i:
+            mystery_set.remove(i)
+
+    print(mystery_set)
+mystery_delete()
+
+numbers1=[1,2,3,4,5]
+answers1=[5,4,1,2,1,3]
+result1=True
+numbers2=[999,1,1001,15,6,7]
+answers2=[1,6,7,1,999]
+result2=False
+numbers3=[3,4,5,7]
+answers3=[3,4,5,6,7]
+result3=False
+
+def set_check(number,answer):
+    if set(number) == set(answer):
+        return True
+    else:
+        return False
+
+print(set_check(numbers3,answers3))
