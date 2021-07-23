@@ -17,7 +17,5 @@ def get_list(range):
     return(list)
    
 
-input = get_list(range)
-print(max(max(x)for x in input[0][:]))
 
 

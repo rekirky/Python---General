@@ -1,6 +1,8 @@
-import pandas as pd
+f_name = ['oliver', 'peter', 'james', 'muhammad', 'david', 'grey']
+l_name=  ['queen', 'pan', 'bond', 'khan', 'paterson', 'hamilton']
+username = []
+for n in f_name:
+    uname = f_name + '_' + l_name[0]
+    username.append(uname)
 
-df = pd.read_csv(r"C:\temp\new 2.csv")
-
-
-print(df.head())
+print(username)

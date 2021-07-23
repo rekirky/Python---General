@@ -1,5 +1,5 @@
 
-import random
+1import random
 
 bchpoint=0
 fac_point=[]
@@ -65,7 +65,7 @@ random_build1 = random.choice(house_lists)
 random_build2 = random.choice(house_lists)
 
 
-def display_board():
+def display_board():4
     print('     ' + '     '.join(str(a) for a in letters))
     print('  +-----' + '+-----' + '+-----' + '+-----' + '+')
     count = 1

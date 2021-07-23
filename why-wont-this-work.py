@@ -1,6 +1,7 @@
 @bot.event
 async def on_message(msg):
-    if msg.author.bot: return 
+    if msg.author.bot: 
+        return 
     username = msg.author.name
     general_channel = bot.get_channel(867594154937679872) 
     int (formatted_time)
