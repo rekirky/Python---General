@@ -38,4 +38,84 @@ def graph2():
     plt.ylabel('Bus passengers')
     plt.title('Bus passengers VS year')
     plt.show()
-graph2()
+#graph2()
+
+
+def combs(a):
+    if len(a) == 0:
+        return [[]]
+    list = []
+    for each in combs(a[1:]): 
+        list = list + [each, each+[a[0]]]
+
+    return list
+
+#print(combs([1, 2, 3, 4, 5]))
+
+
+def regex_wildcard():
+    import re
+
+    flags = re.IGNORECASE
+    pattern = re.compile("y.ll.w",flags)
+    string1 = "yellow"
+    print(pattern.match(string1))
+
+    pattern = re.compile("k.t.", flags)
+    string = 'kite'
+    print(pattern.match(string))
+#regex_wildcard()
+
+# -*- coding: utf8 -*- 
+import binascii
+from re import A
+gsm = ("@£$¥èéùìòÇ\nØø\rÅåΔ_ΦΓΛΩΠΨΣΘΞ\x1bÆæßÉ !\"#¤%&'()*+,-./0123456789:;<=>?"
+       "¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà")
+ext = ("````````````````````^```````````````````{}`````\\````````````[~]`"
+       "|````````````````````````````````````€``````````````````````````")
+
+def gsm_encode(plaintext):
+    res = ""
+    for c in plaintext:
+        idx = gsm.find(c);
+        if idx != -1:
+            res += chr(idx)
+            continue
+        idx = ext.find(c)
+        if idx != -1:
+            res += chr(27) + chr(idx)
+    return binascii.b2a_hex(res.encode('utf-8'))
+
+#print(gsm_encode("HELLO"))
+#print(list("HELLO".encode('ascii')))
+
+
+def and_gate(*args):
+    if all(args) == True:
+        return True
+    else:
+        return False
+
+def not_gate(a):
+    if a == True:
+        return False
+    else:
+        return True
+def or_gate(*args):
+    if any(args) == True:
+        return True
+    else:
+        return False
+
+
+A = True
+B = False
+C = True
+
+
+F = or_gate(
+not_gate(or_gate(not_gate(A),not_gate(B))),
+not_gate(or_gate(not_gate(C),not_gate(B))),
+not_gate(or_gate(C,A)))
+
+print(F)
