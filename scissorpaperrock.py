@@ -24,3 +24,6 @@ while player == False:
             print("You win!", player, "cut", computer)
     else:
         print("That's not a valid play. Check your spelling!")
+    
+    
+    

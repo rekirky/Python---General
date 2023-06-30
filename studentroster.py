@@ -1,3 +1,4 @@
+from collections import namedtuple
 StudentRoster = []
 Student = namedtuple('Student', 'name last_name grade exam_grade')
 
@@ -10,6 +11,7 @@ def getName(student):
     return student.name
 def main():
     StudentRoster.sort(key = getName)
+    print(StudentRoster)
 
 if __name__ == '__main__':
     main()
