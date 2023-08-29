@@ -1,0 +1,9 @@
+Download pyinstaller:
+
+pip install pyinstaller
+
+
+In cmd navigate to folder with your .py file and run
+
+pyinstaller yourcodefile.py --onefile
+
