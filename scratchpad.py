@@ -1,23 +1,7 @@
-import random
+d = "E:\jenkins_agents\dbaNode-sgudiboi\workspace\apps\deploy\prod_deploy\subscription-billing-database\Reporting\DW550SSDBPS01.extranet.com\Project\.git\logs\refs\remotes\origin\feature\RM-23844-breakfix-for-duplicate-payments-on-subscriptions-from-timezone-changes"
+print(len(d))
 
-def ssp():
-    s = 0
-    m = 0
-    while s < 3 or m < 3:
-        maskinSsp = random.choice(["stein", "saks", "papir"])
-        print(maskinSsp)
-        velgSsp = input("Stein, saks, papir\n").lower()
-        print(velgSsp)
-        if maskinSsp == velgSsp:
-            print("Uavgjort")
-        elif maskinSsp == "stein" and velgSsp == "saks" or maskinSsp == "saks" and velgSsp == "papir" or maskinSsp == "papir" and velgSsp == "stein":
-            print("Maskin vant.\n Maskin:", str(m), "\nSpiller:", str(s))
-            m += 1
-        elif velgSsp == "stein" and maskinSsp == "saks" or velgSsp == "saks" and maskinSsp == "papir" or velgSsp == "papir" and maskinSsp == "stein":
-            print("Spiller vant.\n Maskin:", str(m), "\nSpiller:", str(s))
-            s += 1
-    if s == 3:
-        print("Spiller vant.")
-    elif m == 3:
-        print("Maskin vant.")
-ssp()
+
+d = f'E:\JenkinsAgent-01\workspace\euclear\Multiplatform\euclear-launch-pad-database-27014-nuclaunchpad\euclear-launch-pad-database-27014-nuclaunchpad.1.0.70\Export\DatabaseRelease\States\Source\StoredProcedures\eucLaunchPad.Validation_Action_Cache_Key_List_Get.sql'
+
+print(len(d))
