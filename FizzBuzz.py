@@ -1,16 +1,16 @@
 # For a range of numbers. 
-# If number is divisible by variable A - display Bizz
+# If number is divisible by variable A - display Fizz
 # If number is divisible by variable B - display Buzz
-# If divisible by both variable A & B - display BizzBuzz
+# If divisible by both variable A & B - display FizzBuzz
 
-A = 2
+A = 3
 B = 5
-count = 1000
+count = 100
 
 for i in range(1,count+1,1):
     output = ""
     if i%A == 0:
-        output += "Bizz"
+        output += "Fizz"
     
     if i%B == 0:
         output += "Buzz"
